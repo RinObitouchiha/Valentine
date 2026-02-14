@@ -1,0 +1,24 @@
+# Screenshots Folder
+
+## Put your chat screenshots here!
+
+### Required Files:
+- `first-message.jpg` - Screenshot of your very first conversation
+- `chat1.jpg` - Important conversation screenshot
+- `chat2.jpg` - Another special moment
+- `chat3.jpg` - Another memorable chat
+
+### Add More:
+You can add more by naming them `chat4.jpg`, `chat5.jpg`, etc.
+Just copy-paste the chat-item div in index.html and update the filename!
+
+### Tips:
+- Use JPG format for smaller file size
+- Make sure screenshots are clear and readable
+- Crop out any sensitive info you don't want to share
+- Resize to max 1920px width before uploading
+- Compress at tinypng.com for faster loading
+
+### File Names MUST Match:
+Whatever you name these files, make sure they match exactly in the HTML:
+`<img src="assets/images/screenshots/YOUR-FILE-NAME.jpg">`
