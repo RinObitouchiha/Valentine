@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You My Love Zarmin ❤️</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </button>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <canvas id="particleCanvas"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas>
+            <div class="particles" id="particles"></div>
+            <h1 id="heroName">
+                <span class="valentines-title">Happy Valentine's Day</span><br>
+                Zarmin
+            </h1>
+            <p class="subtitle fade-in-delay">
+                <!-- EDIT THIS: Add a meaningful subtitle -->
+                A place I made just for you
+            </p>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. OUR STORY BEGINS -->
+    <section class="section story-begins" id="story">
+        <div class="container">
+            <h2 class="section-title reveal">Where It All Started</h2>
+            <div class="story-content">
+                <div class="story-date">
+                    <!-- EDIT THIS: Add the date and time you first talked -->
+                    <span class="date-label">It began on</span>
+                    <span class="date-value">June 10, 2024</span>
+                </div>
+                <p class="story-text">
+                    <!-- EDIT THIS: Write how you met -->
+                    We started talking in June, and officially became a couple on July 31st.
+                    I didn't know then that you'd become my everything.
+                </p>
+                <div class="first-message">
+                    <div class="connected-grid">
+                        <img src="assets/images/screenshots/First_Convo.jpg" alt="Our first conversation part 1"
+                            class="chat-screenshot fancy-border" loading="lazy">
+                        <img src="assets/images/screenshots/First_Convo_02.jpg" alt="Our first conversation part 2"
+                            class="chat-screenshot fancy-border" loading="lazy">
+                    </div>
+                    <p class="caption">The beginning of something beautiful</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. THE DISTANCE SECTION -->
+    <section class="section distance-section" id="distance">
+        <div class="container">
+            <h2 class="section-title reveal">Miles Apart, Hearts Together</h2>
+            <div class="distance-visual reveal">
+                <div class="location-point location-me">
+                    <div class="point-marker"></div>
+                    <p class="location-label">
+                        <!-- EDIT THIS: Your location -->
+                        Me<br><span class="location-name">Anand, Gujarat</span>
+                    </p>
+                </div>
+                <div class="connecting-line">
+                    <div class="distance-info">
+                        <span class="distance-number">
+                            <!-- EDIT THIS: Distance between you -->
+                            ~75 miles
+                        </span>
+                        <span class="distance-subtext">but always close in heart</span>
+                    </div>
+                </div>
+                <div class="location-point location-you">
+                    <div class="point-marker"></div>
+                    <p class="location-label">
+                        <!-- EDIT THIS: Her location -->
+                        Zarmin<br><span class="location-name">Surat, Gujarat</span>
+                    </p>
+                </div>
+            </div>
+            <div class="timezone-info reveal">
+                <p>
+                    <!-- EDIT THIS: Timezone difference -->
+                    We are in the same timezone,<br>
+                    But we always find time for each other.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. OUR CONVERSATIONS -->
+    <section class="section conversations-section" id="conversations">
+        <div class="container">
+            <h2 class="section-title reveal">Moments In Our Chats</h2>
+            <p class="section-subtitle reveal">Screenshots can't capture everything, but these moments meant the world
+            </p>
+
+            <div class="chat-gallery">
+
+                <!-- 1. Cricket Team Joke -->
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <img src="assets/images/screenshots/Memories_06.jpg" alt="Cricket team joke"
+                            class="chat-img fancy-border" loading="lazy">
+                    </div>
+                    <p class="chat-caption">That time you joked about the cricket team 😂</p>
+                </div>
+
+                <!-- 2. Motivation -->
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <img src="assets/images/screenshots/Memories_08.jpg" alt="Motivation"
+                            class="chat-img fancy-border" loading="lazy">
+                    </div>
+                    <p class="chat-caption">Always motivating me to not take tension ❤️</p>
+                </div>
+
+                <!-- 3. Birthday Gift -->
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Memories_10.jpg" alt="Birthday 1"
+                                class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Memories_10_01.jpg" alt="Birthday 2"
+                                class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Memories_10_02.jpg" alt="Birthday 3"
+                                class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">Your reaction to my gift made my day 🥰</p>
+                </div>
+
+                <!-- 4. Study Motivation Folder -->
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Telling to study/Telling_To_Study_01.jpg" alt="Study 1"
+                                class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Telling to study/Screenshot_20260214_074009.jpg"
+                                alt="Study 2" class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Telling to study/Screenshot_20260214_074031.jpg"
+                                alt="Study 3" class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">Always pushing me to study hard 📚</p>
+                </div>
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Telling to study/Screenshot_20260214_074105.jpg"
+                                alt="Study 4" class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Telling to study/Screenshot_20260214_074123.jpg"
+                                alt="Study 5" class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Telling to study/Screenshot_20260214_074143.jpg"
+                                alt="Study 6" class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">Your strict mode is kinda cute 😤</p>
+                </div>
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Telling to study/Screenshot_20260214_074205.jpg"
+                                alt="Study 7" class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Telling to study/Screenshot_20260214_074216.jpg"
+                                alt="Study 8" class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Telling to study/Screenshot_20260214_074221.jpg"
+                                alt="Study 9" class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">For our future 🌟</p>
+                </div>
+
+                <!-- 5. Caring for me Folder -->
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Caring for my health/Screenshot_20260214_074737.jpg"
+                                alt="Care 1" class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Caring for my health/Screenshot_20260214_074807.jpg"
+                                alt="Care 2" class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">You care for me like no one else 💊</p>
+                </div>
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Caring for my health/Screenshot_20260214_074830.jpg"
+                                alt="Care 3" class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Caring for my health/Screenshot_20260214_074840.jpg"
+                                alt="Care 4" class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Caring for my health/Screenshot_20260214_074904.jpg"
+                                alt="Care 5" class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">My personal nurse and caretaker 🩺</p>
+                </div>
+
+                <!-- 6. Connected Memories -->
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Memories_01.jpg" alt="Memory 1"
+                                class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Memories__01_02.jpg" alt="Memory 1 part 2"
+                                class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">Every conversation is precious</p>
+                </div>
+
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Memories_03.jpg" alt="Memory 3"
+                                class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Memories_03_02.jpg" alt="Memory 3 part 2"
+                                class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">Just us being us</p>
+                </div>
+
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <div class="connected-grid">
+                            <img src="assets/images/screenshots/Memories_07.jpg" alt="Memory 7"
+                                class="chat-img fancy-border" loading="lazy">
+                            <img src="assets/images/screenshots/Memories_07_02.jpg" alt="Memory 7 part 2"
+                                class="chat-img fancy-border" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="chat-caption">Unforgettable moments</p>
+                </div>
+
+                <!-- 7. Single Memories -->
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <img src="assets/images/screenshots/Memories_02.jpg" alt="Memory 2"
+                            class="chat-img fancy-border" loading="lazy">
+                    </div>
+                    <p class="chat-caption">Small moments, big love</p>
+                </div>
+
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <img src="assets/images/screenshots/Memories_04.jpg" alt="Memory 4"
+                            class="chat-img fancy-border" loading="lazy">
+                    </div>
+                    <p class="chat-caption">You make everything better</p>
+                </div>
+
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <img src="assets/images/screenshots/Memories_05.jpg" alt="Memory 5"
+                            class="chat-img fancy-border" loading="lazy">
+                    </div>
+                    <p class="chat-caption">My happiness</p>
+                </div>
+
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <img src="assets/images/screenshots/Memories_09.jpg" alt="Memory 9"
+                            class="chat-img fancy-border" loading="lazy">
+                    </div>
+                    <p class="chat-caption">Understanding each other</p>
+                </div>
+
+                <div class="chat-item reveal">
+                    <div class="chat-screenshot-wrapper">
+                        <img src="assets/images/screenshots/Memories_11.jpg" alt="Memory 11"
+                            class="chat-img fancy-border" loading="lazy">
+                    </div>
+                    <p class="chat-caption">Forever grateful for you</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. VOICE MESSAGES -->
+    <section class="section voice-section" id="voice">
+        <div class="container">
+            <h2 class="section-title reveal">Your Voice</h2>
+            <p class="section-subtitle reveal">Messages I want you to hear</p>
+
+            <div class="audio-players">
+                <!-- Audio Message 1 -->
+                <div class="audio-item reveal">
+                    <div class="audio-title">
+                        Oct 8, 2025 - 2:07 PM
+                    </div>
+                    <div class="custom-audio-player">
+                        <audio id="audio1" src="assets/audio/message1.m4a"></audio>
+                        <button class="play-btn" data-audio="audio1">
+                            <span class="play-icon">▶</span>
+                            <span class="pause-icon">⏸</span>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="progress-bar" data-audio="audio1"></div>
+                        </div>
+                        <div class="audio-time">
+                            <span class="current-time">0:00</span>
+                            <span class="total-time">0:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Message 2 -->
+                <div class="audio-item reveal">
+                    <div class="audio-title">
+                        Oct 8, 2025 - 4:16 PM
+                    </div>
+                    <div class="custom-audio-player">
+                        <audio id="audio2" src="assets/audio/message2.m4a"></audio>
+                        <button class="play-btn" data-audio="audio2">
+                            <span class="play-icon">▶</span>
+                            <span class="pause-icon">⏸</span>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="progress-bar" data-audio="audio2"></div>
+                        </div>
+                        <div class="audio-time">
+                            <span class="current-time">0:00</span>
+                            <span class="total-time">0:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Message 3 -->
+                <div class="audio-item reveal">
+                    <div class="audio-title">
+                        Oct 8, 2025 - 4:28 PM
+                    </div>
+                    <div class="custom-audio-player">
+                        <audio id="audio3" src="assets/audio/message3.m4a"></audio>
+                        <button class="play-btn" data-audio="audio3">
+                            <span class="play-icon">▶</span>
+                            <span class="pause-icon">⏸</span>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="progress-bar" data-audio="audio3"></div>
+                        </div>
+                        <div class="audio-time">
+                            <span class="current-time">0:00</span>
+                            <span class="total-time">0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHY I LOVE YOU -->
+    <section class="section reasons-section" id="reasons">
+        <div class="container">
+            <h2 class="section-title reveal">Why I Love You</h2>
+            <p class="section-subtitle reveal">Not generic reasons, but things that are uniquely YOU</p>
+
+            <div class="reasons-grid">
+                <!-- Reason 1 -->
+                <div class="reason-card reveal">
+                    <div class="reason-number">01</div>
+                    <p class="reason-text">
+                        There's no one in this world who understands me better than you do.
+                    </p>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="reason-card reveal">
+                    <div class="reason-number">02</div>
+                    <p class="reason-text">
+                        You give me your full attention and time, making me feel like the most important person.
+                    </p>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="reason-card reveal">
+                    <div class="reason-number">03</div>
+                    <p class="reason-text">
+                        You help me tackle all my problems just by being there and talking to me.
+                    </p>
+                </div>
+
+                <!-- Reason 4 -->
+                <div class="reason-card reveal">
+                    <div class="reason-number">04</div>
+                    <p class="reason-text">
+                        Talking to you makes my tired body feel light again. You are my peace.
+                    </p>
+                </div>
+
+                <!-- Reason 5 -->
+                <div class="reason-card reveal">
+                    <div class="reason-number">05</div>
+                    <p class="reason-text">
+                        I love how you check on me—did I have breakfast, catch the bus, reach college? You care so much.
+                    </p>
+                </div>
+
+                <!-- Reason 6 -->
+                <div class="reason-card reveal">
+                    <div class="reason-number">06</div>
+                    <p class="reason-text">
+                        I simply cannot imagine my life without you. You are my everything.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. OUR TIMELINE (Hidden as requested) -->
+    <section class="section timeline-section" id="timeline" style="display: none;">
+        <div class="container">
+            <h2 class="section-title reveal">Our Journey</h2>
+            <p class="section-subtitle reveal">Every moment that brought us closer</p>
+
+            <div class="timeline">
+                <!-- Timeline Event 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <!-- EDIT THIS: Date of the event -->
+                            [Date]
+                        </div>
+                        <h3 class="timeline-title">
+                            <!-- EDIT THIS: Title of milestone -->
+                            [Milestone Title]
+                        </h3>
+                        <p class="timeline-description">
+                            <!-- EDIT THIS: Description -->
+                            [What happened and why it matters]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Event 2 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <!-- EDIT THIS: Date of the event -->
+                            [Date]
+                        </div>
+                        <h3 class="timeline-title">
+                            <!-- EDIT THIS: Title of milestone -->
+                            [Milestone Title]
+                        </h3>
+                        <p class="timeline-description">
+                            <!-- EDIT THIS: Description -->
+                            [What happened and why it matters]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Event 3 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <!-- EDIT THIS: Date of the event -->
+                            [Date]
+                        </div>
+                        <h3 class="timeline-title">
+                            <!-- EDIT THIS: Title of milestone -->
+                            [Milestone Title]
+                        </h3>
+                        <p class="timeline-description">
+                            <!-- EDIT THIS: Description -->
+                            [What happened and why it matters]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ADD MORE: Copy paste timeline-item div to add more milestones -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. THINGS I NOTICE -->
+    <section class="section notice-section" id="notice" style="display: none;">
+        <div class="container">
+            <h2 class="section-title reveal">Little Things I Notice</h2>
+            <p class="section-subtitle reveal">Details about you that make me smile</p>
+
+            <div class="notice-list">
+                <!-- Notice 1 -->
+                <div class="notice-item reveal">
+                    <span class="notice-icon">💭</span>
+                    <p class="notice-text">
+                        <!-- EDIT THIS: Something specific you've noticed -->
+                        [Something specific about her behavior, speech, or habits]
+                    </p>
+                </div>
+
+                <!-- Notice 2 -->
+                <div class="notice-item reveal">
+                    <span class="notice-icon">✨</span>
+                    <p class="notice-text">
+                        <!-- EDIT THIS: Something specific you've noticed -->
+                        [Something specific about her behavior, speech, or habits]
+                    </p>
+                </div>
+
+                <!-- Notice 3 -->
+                <div class="notice-item reveal">
+                    <span class="notice-icon">💫</span>
+                    <p class="notice-text">
+                        <!-- EDIT THIS: Something specific you've noticed -->
+                        [Something specific about her behavior, speech, or habits]
+                    </p>
+                </div>
+
+                <!-- Notice 4 -->
+                <div class="notice-item reveal">
+                    <span class="notice-icon">🌟</span>
+                    <p class="notice-text">
+                        <!-- EDIT THIS: Something specific you've noticed -->
+                        [Something specific about her behavior, speech, or habits]
+                    </p>
+                </div>
+
+                <!-- Notice 5 -->
+                <div class="notice-item reveal">
+                    <span class="notice-icon">💝</span>
+                    <p class="notice-text">
+                        <!-- EDIT THIS: Something specific you've noticed -->
+                        [Something specific about her behavior, speech, or habits]
+                    </p>
+                </div>
+
+                <!-- ADD MORE: Copy paste notice-item to add more observations -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. INSIDE JOKES (Hidden as requested) -->
+    <section class="section jokes-section" id="jokes" style="display: none;">
+        <div class="container">
+            <h2 class="section-title reveal">Our Inside Jokes</h2>
+            <p class="section-subtitle reveal">Things only we understand 😄</p>
+
+            <div class="jokes-grid">
+                <!-- Joke 1 -->
+                <div class="joke-card reveal">
+                    <div class="joke-emoji">😂</div>
+                    <h3 class="joke-title">
+                        <!-- EDIT THIS: The joke/reference -->
+                        "[The inside joke or phrase]"
+                    </h3>
+                    <p class="joke-context">
+                        <!-- EDIT THIS: Brief context -->
+                        [Brief explanation of the joke]
+                    </p>
+                </div>
+
+                <!-- Joke 2 -->
+                <div class="joke-card reveal">
+                    <div class="joke-emoji">🤣</div>
+                    <h3 class="joke-title">
+                        <!-- EDIT THIS: The joke/reference -->
+                        "[The inside joke or phrase]"
+                    </h3>
+                    <p class="joke-context">
+                        <!-- EDIT THIS: Brief context -->
+                        [Brief explanation of the joke]
+                    </p>
+                </div>
+
+                <!-- Joke 3 -->
+                <div class="joke-card reveal">
+                    <div class="joke-emoji">😄</div>
+                    <h3 class="joke-title">
+                        <!-- EDIT THIS: The joke/reference -->
+                        "[The inside joke or phrase]"
+                    </h3>
+                    <p class="joke-context">
+                        <!-- EDIT THIS: Brief context -->
+                        [Brief explanation of the joke]
+                    </p>
+                </div>
+
+                <!-- ADD MORE: Copy paste joke-card to add more jokes -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. WHEN WE MEET -->
+    <section class="section future-section" id="future">
+        <div class="container">
+            <h2 class="section-title reveal">When We Finally Meet</h2>
+            <p class="section-subtitle reveal">Things I dream about doing with you</p>
+
+            <div class="future-grid">
+                <!-- Future Plan 1 -->
+                <div class="future-card reveal">
+                    <div class="future-icon">🤗</div>
+                    <h3 class="future-title">
+                        Hold You Tightly
+                    </h3>
+                    <p class="future-description">
+                        When we meet, I want to hug you tightly and never let you go easily.
+                    </p>
+                </div>
+
+                <!-- Future Plan 2 -->
+                <div class="future-card reveal">
+                    <div class="future-icon">🌅</div>
+                    <h3 class="future-title">
+                        Thank You
+                    </h3>
+                    <p class="future-description">
+                        I want to look in your eyes and thank you for choosing me and staying with me.
+                    </p>
+                </div>
+
+                <!-- Future Plan 3 -->
+                <div class="future-card reveal">
+                    <div class="future-icon">💍</div>
+                    <h3 class="future-title">
+                        A Forever Promise
+                    </h3>
+                    <p class="future-description">
+                        I want to ask you to stay with me forever... and to marry me.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. THE LETTER -->
+    <section class="section letter-section" id="letter">
+        <div class="container">
+            <h2 class="section-title reveal">A Letter To You</h2>
+            <div class="letter-container">
+                <div class="letter-content">
+                    <p class="letter-greeting">Dear Zarmin,</p>
+                    <div id="letterText" class="letter-body">
+                        Writing this, I realize how much you truly mean to me. There is no one in this world who
+                        understands me better than you do. You give me your full attention, your time, and you have this
+                        amazing ability to help me tackle all my problems just by listening and talking to me.
+                        <br><br>
+                        I love how you care for me throughout the day. From 'did you do breakfast?' to checking if I
+                        caught the bus, reached college, or had dinner—you are always around me, even when we are miles
+                        apart. Talking to you makes my tired body feel light again. You are my peace.
+                        <br><br>
+                        I cannot imagine my life without you. When we finally meet, I want to hug you tightly and never
+                        let go. I want to look into your eyes and thank you for choosing me, for staying with me, and
+                        for loving me.
+                        <br><br>
+                        You are my everything, and I promise to always be yours.
+                    </div>
+                    <p class="letter-signature">
+                        Forever yours,<br>
+                        Ibrahim ❤️
+                    </p>
+                </div>
+                <div class="typewriter-controls">
+                    <button id="pauseTypewriter" class="typewriter-btn">Pause</button>
+                    <button id="speedUpTypewriter" class="typewriter-btn">Speed Up</button>
+                    <button id="replayTypewriter" class="typewriter-btn">Replay</button>
+                    <button id="readAloud" class="typewriter-btn">🔊 Read Aloud</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FINAL MESSAGE -->
+    <section class="section final-section" id="final">
+        <div class="container">
+            <div class="final-content reveal">
+                <h2 class="final-title">Before You Go...</h2>
+                <p class="final-message">
+                    I can't ever lose you. You are my forever.
+                </p>
+
+                <!-- Optional Final Audio Message -->
+                <div class="final-audio">
+                    <p class="final-audio-label">One last thing...</p>
+                    <div class="custom-audio-player">
+                        <audio id="audioFinal" src="assets/audio/final-message.m4a"></audio>
+                        <button class="play-btn final-play" data-audio="audioFinal">
+                            <span class="play-icon">▶</span>
+                            <span class="pause-icon">⏸</span>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="progress-bar" data-audio="audioFinal"></div>
+                        </div>
+                        <div class="audio-time">
+                            <span class="current-time">0:00</span>
+                            <span class="total-time">0:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="final-note">
+                    This website will be here whenever you need to remember how much you mean to me. ❤️
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with ❤️ for Zarmin</p>
+        <p class="footer-date">Valentine's Day 2026</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/audio-player.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/advanced-animations.js"></script>
+</body>
+
+</html>

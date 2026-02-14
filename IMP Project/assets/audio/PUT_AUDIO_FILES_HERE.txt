@@ -1,0 +1,43 @@
+# Audio Folder
+
+## Put your voice messages here!
+
+### Required Files:
+- `message1.mp3` - First voice message
+- `message2.mp3` - Second voice message
+- `final-message.mp3` - Final "I love you" message
+
+### Add More:
+You can add more by naming them `message3.mp3`, `message4.mp3`, etc.
+Just copy-paste the audio-item div in index.html!
+
+### How to Get MP3 Files:
+
+**From WhatsApp/Telegram:**
+1. Long press on voice message
+2. Forward/Share to yourself
+3. Download to your phone
+4. Transfer to computer
+5. Convert to MP3 if needed
+
+**From Voice Recorder:**
+1. Record using your phone's voice recorder
+2. Save as MP3 (or convert using online converter)
+3. Transfer to computer
+
+### Audio Tips:
+- Format: MP3 (most compatible)
+- Quality: 128kbps is perfect (smaller file, still clear)
+- Length: Keep under 2 minutes each
+- Volume: Make sure it's clear and not too quiet
+- Test: Play them before uploading to check quality
+
+### File Names MUST Match:
+Whatever you name these files, make sure they match in HTML:
+`<audio id="audio1" src="assets/audio/YOUR-FILE-NAME.mp3"></audio>`
+
+### Converting to MP3:
+If your audio is in a different format:
+- Use online converter: cloudconvert.com
+- Or use Audacity (free software)
+- Upload, select MP3, download

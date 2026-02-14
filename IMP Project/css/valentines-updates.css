@@ -1,0 +1,67 @@
+/* Valentine's Day Special Styles */
+.valentines-hero {
+    position: relative;
+}
+
+.valentines-title {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+    animation: glow 2s infinite alternate;
+    margin-bottom: 20px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+    }
+
+    to {
+        text-shadow: 0 0 20px rgba(255, 105, 180, 1), 0 0 30px #ff69b4;
+    }
+}
+
+/* Beautiful Borders for Memories */
+.fancy-border {
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* Slightly rounded for photos */
+    transition: transform 0.3s ease;
+}
+
+.fancy-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    z-index: 10;
+    pointer-events: none;
+    margin: 5px;
+    /* Inner border offset */
+}
+
+.fancy-border:hover {
+    transform: scale(1.02) rotate(1deg);
+    /* Subtle tilt on hover */
+    z-index: 5;
+}
+
+/* Grid for connected images */
+.connected-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.connected-grid .chat-img {
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+}

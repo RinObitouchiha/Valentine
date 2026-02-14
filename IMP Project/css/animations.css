@@ -1,0 +1,406 @@
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+/* Typewriter Effect */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid white;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    display: inline-block;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+/* Fade in with delay */
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 1s ease-in 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Bounce animation for scroll indicator */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Pulse animation for location markers */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 157, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 0 20px rgba(255, 107, 157, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 157, 0);
+    }
+}
+
+/* Reveal animation for scroll-triggered elements */
+/* NOTE: Opacity is now handled by GSAP. We set default to 1 to ensure visibility if JS fails or for GSAP .from() to work correctly. */
+.reveal {
+    /* opacity: 0; REMOVED for GSAP compatibility */
+    /* transform: translateY(30px); REMOVED */
+    /* transition: opacity 0.6s ease, transform 0.6s ease; REMOVED - GSAP handles transitions */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered reveal for grid items - handled by GSAP stagger */
+
+.reveal:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.reveal:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.reveal:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.reveal:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.reveal:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.reveal:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
+.reveal:nth-child(8) {
+    transition-delay: 0.8s;
+}
+
+.reveal:nth-child(9) {
+    transition-delay: 0.9s;
+}
+
+.reveal:nth-child(10) {
+    transition-delay: 1s;
+}
+
+/* Floating hearts animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: float linear infinite;
+    pointer-events: none;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Rotate in animation */
+@keyframes rotateIn {
+    from {
+        transform: rotate(-180deg) scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Glow effect */
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(255, 107, 157, 0.8);
+    }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ===================================
+   3D TILT EFFECT
+   =================================== */
+.tilt-effect {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.tilt-content {
+    transform: translateZ(20px);
+}
+
+/* ===================================
+   FLOATING HEARTS GENERATOR
+   =================================== */
+.floating-heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 20px;
+    color: var(--primary-color);
+    opacity: 0.6;
+    z-index: 1;
+    /* Behind content but visible */
+    pointer-events: none;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ===================================
+   HERO PARALLAX
+   =================================== */
+.hero-content {
+    transition: transform 0.1s ease-out;
+    /* Smooth follow */
+}
+
+/* ===================================
+   AUDIO VISUALIZER
+   =================================== */
+.audio-visualizer {
+    display: flex;
+    align-items: flex-end;
+    height: 30px;
+    gap: 2px;
+    margin-left: 15px;
+}
+
+.visualizer-bar {
+    width: 3px;
+    background-color: var(--primary-color);
+    height: 5px;
+    transition: height 0.1s ease;
+    border-radius: 2px;
+}
+
+/* ===================================
+   SCROLL PROGRESS BAR
+   =================================== */
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    z-index: 9999;
+    transition: width 0.1s ease-out;
+}
+
+/* ===================================
+   CUSTOM CURSOR
+   =================================== */
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9998;
+    pointer-events: none;
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Cursor Hover State */
+body:hover .cursor-dot,
+body:hover .cursor-outline {
+    opacity: 1;
+}
+
+.cursor-hover {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 107, 157, 0.2);
+    border-color: transparent;
+}
+
+/* ===================================
+   CLICK HEART POP
+   =================================== */
+.click-heart {
+    position: fixed;
+    font-size: 24px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    animation: heartPop 0.8s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes heartPop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -100%) scale(1.5);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(-50%, -200%) scale(2);
+        opacity: 0;
+    }
+}
